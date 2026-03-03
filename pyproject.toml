@@ -79,6 +79,10 @@ cmd = "ruff format"
 ## Run tests
 
 [tool.poe.tasks.test]
+help = "Run all tests"
+sequence = ["test-unit", "test-e2e"]
+
+[tool.poe.tasks.test-unit]
 help = "Run unit tests"
 cmd = "pytest backend/tests/unit"
 
